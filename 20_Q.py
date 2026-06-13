@@ -1,21 +1,42 @@
 cat: dict[str,bool] = {
-    "is it physical": True,
-    "is it ananimal": True,
-    "does it have four legs": True,
-    "is it a plant": False,
-    "is it a canine": False,
-    "is it a feline": True,
-    "can it be brown": True
+    "Is it physical?": True,
+    "Is it an animal?": True,
+    "Does it have four legs?": True,
+    "Is it a plant?": False,
+    "Is it a canine?": False,
+    "Is it a feline?": True,
+    "Can it be brown?": True
 }
 dog: dict[str,bool] = {
-    "is it physical": True,
-    "is it ananimal": True,
-    "does it have four legs": True,
-    "is it a plant": False,
-    "is it a canine": True,
-    "is it a feline": False,
-    "can it be brown": True
+    "Is it physical?": True,
+    "Is it an animal?": True,
+    "Does it have four legs?": True,
+    "Is it a plant?": False,
+    "Is it a canine?": True,
+    "Is it a feline?": False,
+    "Can it be brown?": True
 }
 
+possible_answers = [cat, dog]
+possible_questions = list (cat.keys())
+game_is_going = True
+count = 0
+response = ""
+answer: bool = True
 
 
+while game_is_going:
+  
+    while response != "T" or "F":
+        response = input("T or F: " + possible_questions[count])
+        if response == "T":
+            answer = True
+        elif response == "F":
+            answer = False
+        elif response == "Quit" or response == "quit":
+            game_is_going = False
+            break
+        else:
+            print("Invalid input: Please enter T or F")
+        
+    
