@@ -1,3 +1,5 @@
+import random
+
 cat: dict[str,any] = {
     "name": "cat",
     "Is it an animal?": True,
@@ -72,6 +74,9 @@ tree: dict[str,any] = {
 possible_answers = [cat, dog, apple, orange, tree] # List of answers as dictionaries so info is stored
 possible_questions = list (cat.keys())
 possible_questions.pop(0)   # Removes the name of the dictionary so only keys to boolean values remain
+random.shuffle(possible_questions) 
+
+
 game_is_going = False
 # Player picks an solution 
 print("Let's play 20 questions!")
