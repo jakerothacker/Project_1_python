@@ -111,8 +111,6 @@ answer: bool = True
 
 while game_is_going:
 
-
-  # Player responds to the question
     while response != "T" and response != "F":
         response = input("T or F: " + possible_questions[count])
         if response == "T":
@@ -126,7 +124,6 @@ while game_is_going:
             print("Invalid input: Please enter T or F")
 
 
-# Remove answers that don't match the current question
     l = len(possible_answers)
     i=0
     while i<l: 
@@ -141,7 +138,7 @@ while game_is_going:
     response = ""
     count += 1
 
-# For when one possible answer remains
+
     if len(possible_answers) == 1:
         print("The answer is: " + possible_answers[0]["name"])
         game_is_going = False 
