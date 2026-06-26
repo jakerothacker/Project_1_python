@@ -69,7 +69,7 @@ tree: dict[str,any] = {
     "Is it a plant?": True,
     "Is it a canine?": False,
     "Is it a feline?": False,
-    "Can it be brown?": False,
+    "Can it be brown?": True,
     "Is it round?": False,
     "Is it an animal?": False,
     "Is it red?": False,
